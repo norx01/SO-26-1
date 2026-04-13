@@ -1,3 +1,5 @@
+package hilosProcesos;
+
 public class Hilo
 {
     public static void main(String[] args) throws InterruptedException
