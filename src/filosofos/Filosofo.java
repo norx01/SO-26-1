@@ -1,6 +1,7 @@
 package filosofos;
 
-public class Filosofo implements Runnable {
+public class Filosofo implements Runnable
+{
     private final int id;
     private final Object tenedorIzquierdo;
     private final Object tenedorDerecho;
@@ -30,10 +31,12 @@ public class Filosofo implements Runnable {
                 Object primero = (id == 4) ? tenedorDerecho : tenedorIzquierdo;
                 Object segundo = (id == 4) ? tenedorIzquierdo : tenedorDerecho;
 
-                synchronized (primero) {
+                synchronized (primero)
+                {
                     System.out.println("El Filosofo " + id + " esta tomando su primer tenedor");
 
-                    synchronized (segundo) {
+                    synchronized (segundo)
+                    {
                         System.out.println("El Filosofo " + id + " esta tomando su segundo tenedor");
                         comer();
                         System.out.println("El Filosofo " + id + " ha terminado de comer");
